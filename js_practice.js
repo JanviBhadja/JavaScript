@@ -67,3 +67,29 @@ fruits= ["apple", "banana", "cherry"];
 for (let i = 0; i < fruits.length; i++) {
     console.log("I like", fruits[i]);
 }
+
+
+class Parent {
+    constructor(name){
+        this.name = name;
+    }
+parentMethod(){
+    console.log(`parent method calling by ${this.name}`);
+    }
+}
+  
+class Child extends Parent {
+    constructor(name, age){
+        super(name);
+        this.age = age;
+    }
+    
+childMethod(){
+    console.log(`child method calling by ${this.name} and ${this.age}.`);
+    }
+}
+
+const childObj = new Child("Janvi", 21);
+
+childObj.parentMethod();
+childObj.childMethod();
